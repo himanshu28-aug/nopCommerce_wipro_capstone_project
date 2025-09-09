@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [NopCommerce Checkout Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Guest Checkout Test(failed)">
+    <parameter name="baseUrl" value="https://demo.nopcommerce.com/"/>
+    <parameter name="productIndex" value="1"/>
+    <parameter name="category" value="Apparel"/>
+    <classes>
+      <class name="tests.CheckoutTest">
+        <methods>
+          <include name="selectPaymentMethod"/>
+          <include name="tearDown"/>
+          <include name="proceedToCheckout"/>
+          <include name="fillBillingDetails"/>
+          <include name="selectShippingMethod"/>
+          <include name="setUp"/>
+          <include name="confirmPaymentInfo"/>
+          <include name="confirmOrder"/>
+          <include name="goToHomePage"/>
+        </methods>
+      </class> <!-- tests.CheckoutTest -->
+    </classes>
+  </test> <!-- Guest Checkout Test(failed) -->
+</suite> <!-- Failed suite [NopCommerce Checkout Suite] -->
